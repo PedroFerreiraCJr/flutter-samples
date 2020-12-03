@@ -9,18 +9,49 @@ void main() {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "Flutter is Awesome",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.black,
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.normal,
-                decoration: TextDecoration.none,
-                letterSpacing: 1.5,
+            RaisedButton(
+              onPressed: () {
+                print("Salvando informações...");
+              },
+              child: Text(
+                "Salvar",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
               ),
             ),
+            FlatButton(
+              onPressed: () {
+                print("Cancelando salvamento...");
+              },
+              child: Text(
+                "Cancelar",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            Row(children: <Widget>[
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(left: 16, right: 16),
+                  child: RaisedButton(
+                    onPressed: () {
+                      print("Fechando...");
+                    },
+                    child: Text(
+                      "Fechar",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],),
           ],
         ),
       ),
