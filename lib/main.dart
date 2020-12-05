@@ -1,27 +1,43 @@
 import 'package:flutter/material.dart';
 
+///
+/// Elementos Principais:
+///   1. Scaffold;
+///
+///
 void main() {
   runApp(MaterialApp(
-    title: "Default App Structure",
-    home: SafeArea(
-      child: Container(
-        color: Colors.white,
+    debugShowCheckedModeBanner: false,
+    title: "Scaffold",
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Scaffold"),
+        backgroundColor: Colors.blue
+      ),
+      body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Text(
-              "Flutter is Awesome",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.black,
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.normal,
-                decoration: TextDecoration.none,
-                letterSpacing: 1.5,
-              ),
-            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text("Texto Principal")
+            ],)
           ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.lightBlue,
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Text("Text 1"),
+              Text("Text 2")
+            ],
+          ),
         ),
       ),
     ),
