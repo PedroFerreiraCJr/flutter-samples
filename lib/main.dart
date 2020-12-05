@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 ///
 /// Elementos Principais:
 ///   1. Scaffold;
+///   2. AppBar;
+///   3. BottomAppBar;
 ///
 ///
 void main() {
